@@ -1,0 +1,25 @@
+ACLs--------------------------------------
+
+ACLs numeradas(config)$ access-list [access-list -number] {deny|permit|remark text} source [source wildcard] [log]
+
+ACLs nombradas (config)$ip access-list standard [Nombre descriptivo en mayusculas sugerido]
+
+Luego se asocia la ACL a una interfaz
+(config-if)$ip access-group [access-list-numer] [out/in]
+
+Las configuraciones se hacen en cada router
+
+#show run | section access-list
+# show ip int Serial 0/1/0 | include access list
+
+
+Modificar una ACL------------------------------------
+
+podemos poner otra ACL mediante el numero de prioridad 
+(config-std-nacl)#15 deny 192.168.10.5    ---->
+
+R3(config)#access-list 1 remark Allow R1 LANs Access     remark [COmentario descriptivo]
+
+
+VTY-------------------------------------------------
+(config-line)$access-class [USUARIO] {in/out}
