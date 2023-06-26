@@ -1,0 +1,28 @@
+-------Redes 2------
+--->Conmutación de circuitos y paquetes:
+por circuitos-->primero establecemos ruta física con el destino, no segmenta paquetes.T
+por paquetes----->
+	divicion de paquetes al inicio y reconstruccion al final.
+	Mejor uso recursos y ancho de Banda.
+	TCP(division) ICMP(controla errores)
+	Ruido de fondo, perdida de paquetes.
+	Se crean circuitos virtuales(permanentes o conmutados)
+	TIpos:
+		Simplificado: Redes pequeñas
+	 	complejo: Redes grandes
+		Hibrido:  fusion 2 anteriores.	
+	Funcionamiento:
+	Segmentacion:
+	Enrutamiento: se enruta paquetes por varios caminos
+	Reensamblaje:
+
+------>PSTN(Public switched telephone NETWORK)
+	Conexion fisica (cables, fibra optica...) entre 2 telefonos.
+	Mayor calidad.
+	PBX hay 1 en cada lado de la comunicacion 
+	Luego se usaron router y switches
+	
+
+
+--->ICDM
+	Linea digital.
