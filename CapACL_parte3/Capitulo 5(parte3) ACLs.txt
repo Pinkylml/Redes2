@@ -1,0 +1,28 @@
+R1# access- list 100 permit tcp 172.22.34.64 0.0.0.31
+Gu1t4r9%28/10
+
+
+
+En pc1 ftp 172.22.34.62
+
+En pc2 web browser 172.22.34.62
+COntrolamos ICMP para poder hacer ping. sirve para evitar que el host verifique si ese servidor esta activo
+--------------5.4.15
+permit ip any any   (dentro de la conf de ACL extendida nombrada ACL)
+int gigabitEthernet 0/0
+ip access-group ACL in
+
+------------5.5.1
+Requisito de ACL 1:
+	ip access-list extended 101
+	deny icmp any 192.168.1.0 0.0.0.63   (para bloquear ICMP)
+	deny tcp any host 192.168.1.70 eq 21
+	permit ip any any
+-int serial 0/1/0  entramos a serial
+	ip access-group 101 in
+Requisitos de ACL 2:
+	ip access-list extended 111
+	deny ip 192.168.1.0 0.0.0.63 host 192.168.2.45
+	permit ip any any
+-int gig0/0/0
+	ip access-group 111 in
